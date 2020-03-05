@@ -1,4 +1,4 @@
-.PHONY: lint test
+.PHONY: lint test requirements
 	
 lint:
 	pylint lint_diffs test/test_*.py
@@ -6,3 +6,6 @@ lint:
 
 test:
 	pytest -v --cov=lint_diffs -n=2 .
+
+requirements:
+	pip install -r requirements.txt
